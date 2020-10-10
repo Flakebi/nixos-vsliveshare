@@ -1,5 +1,5 @@
 { writeShellScriptBin, lib, coreutils, findutils, nix, git, file, gnugrep, jq
-, extensionsDir, nixpkgs }:
+, extensionsDir ? "$HOME/.vscode/extensions", nixpkgs }:
 
 writeShellScriptBin "fix-vsliveshare" ''
   PATH=${lib.makeBinPath [ coreutils findutils nix git file gnugrep jq ]}
